@@ -16,7 +16,7 @@
 
 
 // append - insert element before closing 
-let exercisesElement = documentquerySelector('#exercises');
+let exercisesElement = document.querySelector('#exercises');
 
 let h1Element = document.createElement('h1'); //create
 h1Element.textContent = "H1 header"; //modify
@@ -57,14 +57,39 @@ h6Element.textContent = "H6 header"; //modify
 
 // Exercises
 
-let exercise1 = document.querySelector('#exercise');
-exercise1.before('before');
-exercise1.prepend('prepend');
-exercise1.append('append');
-exercise1.after('after');
+// let exercise1 = document.querySelector('#exercise');
+// exercise1.before('before');
+// exercise1.prepend('prepend');
+// exercise1.append('append');
+// exercise1.after('after');
 // exercise1.replaceWith('replaced');
 
 let buttonElement = document.createElement('button');
 document.body.prepend(buttonElement)
 buttonElement.textContent = "Launch Meeting";//modify
 buttonElement.style.backgroundColor = "blue";
+buttonElement.style.color = "white";
+buttonElement.style.padding = "10px 25px";
+buttonElement.style.borderRadius = "10px";
+buttonElement.style.border = "none";
+
+
+
+
+
+//
+let shoppingList = ['Apple', 'Banana','Pinapple'];
+
+//create ul 
+let listElement = document.createElement('ul');
+exercisesElement.prepend(listElement);
+//create li
+
+for (let i = 0; i < shoppingList.length; i++) {
+  
+
+let listItemElement = document.createElement('li');
+listElement.append(listItemElement);
+listItemElement.textContent = shoppingList[i];
+}
+
