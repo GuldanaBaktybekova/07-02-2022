@@ -77,19 +77,74 @@ buttonElement.style.border = "none";
 
 
 
+
 //
-let shoppingList = ['Apple', 'Banana','Pinapple'];
+// let shoppingList = ['Apple', 'Banana','Pinapple'];
 
-//create ul 
-let listElement = document.createElement('ul');
-exercisesElement.prepend(listElement);
-//create li
+// //create ul 
+// let listElement = document.createElement('ul');
+// exercisesElement.prepend(listElement);
+// //create li
 
-for (let i = 0; i < shoppingList.length; i++) {
+// for (let i = 0; i < shoppingList.length; i++) {
   
 
-let listItemElement = document.createElement('li');
-listElement.append(listItemElement);
-listItemElement.textContent = shoppingList[i];
-}
+// let listItemElement = document.createElement('li');
+// listElement.append(listItemElement);
+// listItemElement.textContent = shoppingList[i];
+// }
 
+
+//Таблица
+ let table = ['Apple', 'Banana', 'Pinapple'];
+
+ let listElement = document.createElement('table');
+ exercisesElement.prepend(listElement);
+ for (let i = 0; i < shoppingList.length; i++) {
+   let tr = document.createElement('tr');
+  
+   table.append(tr);
+   let td = document.createElement('td');
+   tr.append(td);
+   td.style.border = "1px solid black";
+   td.textContent = shoppingList[i];
+   
+ }
+
+
+
+
+
+
+
+
+
+
+
+// // How to copy
+// let button2 = buttonElement.cloneNode();
+// button2.textContent = "Hello";
+// exercisesElement.prepend(button2);
+
+// // let button3 = button.cloneNode();
+// // button3.textContent = "World";
+// // button3.style = "purple"
+// // exercisesElement.prepend(button2);
+
+
+// // How to remove
+// button2.remove();
+
+
+// let list2 = listElement.cloneNode(true);
+// exercisesElement.prepend(list2);
+
+
+
+//HELLO
+// let div = document.createElement('div');
+// document.body.prepend(div)
+// div.textContent = "HELLO";
+// div.style.fontWeight = "700";
+// div.style.fontSize = "30px";    NO
+// div.style.color = `rgb($()
