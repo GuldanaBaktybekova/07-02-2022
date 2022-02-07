@@ -1,15 +1,70 @@
 // Method.1
 // Create
-document.body.innerHTML = "<h1>Hello world</h1>";
-// Find
-let h1Element = document.querySelector('h1');
-// Modify
-h1Element.style.color = "rgb(255, 0, 0)";
+// document.body.innerHTML = "<h1>Hello world</h1>";
+// // Find
+// let h1Element = document.querySelector('h1');
+// // Modify
+// h1Element.style.color = "rgb(255, 0, 0)";
 
-// Method.2
-// Create
+// // Method.2
+// // Create
+// let h2Element = document.createElement('h2');
+// // Attach
+// document.body.prepend(h2Element);
+// // Modify
+// h2Element.textContent = "Nice to meet you";
+
+
+// append - insert element before closing 
+let exercisesElement = documentquerySelector('#exercises');
+
+let h1Element = document.createElement('h1'); //create
+h1Element.textContent = "H1 header"; //modify
+exercisesElement.append(h1Element); //attach
+
+
+//h2
 let h2Element = document.createElement('h2');
-// Attach
-document.body.prepend(h2Element);
-// Modify
-h2Element.textContent = "Nice to meet you";
+
+h2Element.textContent = "H2 header";
+exercisesElement.append(h2Element); //attach
+
+
+//h3
+let h3Element = document.createElement('h3');//create
+
+h3Element.textContent = "H3 header";//modify
+exercisesElement.append(h2Element); //attach
+
+
+//h4
+let h4Element = document.createElement('h4'); //create
+exercisesElement.prepend(h4Element); //attach
+h4Element.textContent = "H4 header"; //modify
+
+//h5
+
+let h5Element = document.createElement('h4'); //create
+exercisesElement.before(h5Element); //attach
+h5Element.textContent = "H5 header"; //modify
+
+//h6
+let h6Element = document.createElement('h6'); //create
+exercisesElement.after(h6Element); //attach
+h6Element.textContent = "H6 header"; //modify
+
+
+
+// Exercises
+
+let exercise1 = document.querySelector('#exercise');
+exercise1.before('before');
+exercise1.prepend('prepend');
+exercise1.append('append');
+exercise1.after('after');
+// exercise1.replaceWith('replaced');
+
+let buttonElement = document.createElement('button');
+document.body.prepend(buttonElement)
+buttonElement.textContent = "Launch Meeting";//modify
+buttonElement.style.backgroundColor = "blue";
